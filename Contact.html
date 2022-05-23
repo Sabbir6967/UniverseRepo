@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Contact form</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.dropotron.min.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/skel-layers.min.js"></script>
+  <script src="js/init.js"></script>
+  <!--script for project 4 added below-->
+  <script src="js/script4.js"></script>
+  <!--modernizr below-->
+  <script src="js/modernizr.custom.05819.js"></script>
+  <noscript>
+    <link rel="stylesheet" href="css/skel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </noscript>
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+
+<body class="right-sidebar">
+
+  <!-- Header -->
+  <div id="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <h1><a href="#" id="logo">Contact Us</a></h1>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="index.htm">Home</a></li>
+          <li><a href="OurPlanet.html">Our Planets</a></li>
+          <li><a href="KnowThis.html">Know This</a></li>
+          <li><a href="Myths.html">Myths</a></li>
+          <li><a href="Facts.html">Facts</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div style="background-color:honeydew" id="main" class="wrapper style">
+    <div class="container">
+      <div class="row">
+
+        <!-- Content -->
+        <div id="content" class="6u skel-cell-important">
+          <section>
+            <header class="major">
+              <h2>Contact form</h2>
+            </header>
+            <div id="date"></div>
+            <!--feedback form-->
+
+            <form action="mailto:sabbir.skisc.sa@gmail.com" method="post" enctype="text/plain" id="userInfo">
+              <fieldset>
+                <!-- collect user information -->
+                <legend><b>Enter your Information</b></legend>
+                <br />
+                <div id="errorText"></div>
+                <div>
+                  <input type="text" id="Fnameinput" name="name" placeholder="First Name" required />
+                </div>
+                <div>
+                  <input type="text" id="Lnameinput" name="name" placeholder="Last Name" required />
+                </div>
+                <div>
+                  <input type="email" id="emailinput" name="email" placeholder="Email" required />
+                </div>
+                <div>
+                  <input type="text" id="phoneinput" name="phone" placeholder="Phone number" required />
+                </div>
+              </fieldset>
+              <br />
+              <!-- Dropdown option -->
+              <fieldset>
+                <legend><b>Which is your favourite planet</b></legend>
+                <select id="fav" name="favorite" required>
+                  <option value="">Choose</option>
+                  <option value="Jupiter">Jupiter</option>
+                  <option value="Mars">Mars</option>
+                  <option value="Earth">Earth</option>
+                  <option value="Saturn">Saturn</option>
+                  <option value="Venus">Venus</option>
+                </select>
+              </fieldset>
+              <br />
+              <fieldset>
+                <!-- text area -->
+                <legend><b>Type Your message</b></legend>
+                <textarea id="message" name="message" rows="10" cols="60" placeholder="Type your feedback to us..."
+                  required></textarea>
+              </fieldset>
+              <br />
+              <fieldset>
+                <!-- reset and submit -->
+                <input type="reset" value="Reset" />
+                <input type="submit" value="Submit" onclick="validateRequired()" />
+              </fieldset>
+              <br />
+              <fieldset>
+              </fieldset>
+              <br />
+            </form>
+
+
+
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="conatiner">
+
+
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+      Design: <a href="http://templated.co">&copy;TEMPLATED</a> Editor:
+      <a href="mailto:sabbir.skisc.sa@gmail.com">Sabbir Ahmed</a>
+      <br />
+      <p style="text-align: center;">
+        <a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a>
+
+      </p>
+      <p>
+        This site is for educational purpose only. No commercial value.
+      </p>
+    </div>
+  </div>
+
+  <!--Script for current date-->
+
+  <script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById("date").innerHTML = today;   
+  </script>
+</body>
+
+</html>
